@@ -1,0 +1,80 @@
+{
+  "name": "smart_pos",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "axios": "^1.5.0",
+    "bootstrap": "^5.3.1",
+    "joi-browser": "^13.4.0",
+    "jwt-decode": "^3.1.2",
+    "lodash": "^4.17.10",
+    "moment": "^2.29.4",
+    "prop-types": "^15.6.2",
+    "react": "^18.2.0",
+    "react-apexcharts": "^1.4.1",
+    "react-countup": "^6.4.2",
+    "react-dom": "^18.2.0",
+    "react-drag-drop-files": "^2.3.10",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^4.11.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "5.0.1",
+    "serve": "^14.2.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "coverage": "react-scripts test --coverage --watchAll",
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "heroku-postbuild": "npm run build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/components/**/*.{js,jsx}",
+      "!src/components/charts/*.{js,jsx}",
+      "src/components/charts/dashboardTile.{js,jsx}",
+      "!src/components/employee/passwordChangeWindow.{js,jsx}",
+      "!src/components/employee/verifyUserWindow.{js,jsx}",
+      "!src/components/accessFrame.{js,jsx}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 50,
+        "lines": 50,
+        "statements": 50
+      }
+    },
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs"
+    }
+  },
+  "engines": {
+    "node": "18.16.1"
+  }
+}
